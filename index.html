@@ -3,21 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Samjhana</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- GSAP Core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
 </head>
 <body>
-    <div class="main-body">
-        <div class="main-text">
-            <h1>SAMJHANA</h1>
+    <div class="main-body w-full h-screen flex justify-center relative">
+        <div id="loader" class="w-full h-screen flex justify-center absolute items-center bg-black z-3">
+            <div class="rose-black absolute">
+                <img class="h-[100px]" src="Rose_Black.png">
+            </div>
+            <div class="rose-color absolute opacity-0">
+                <img class="h-[100px]" src="Rose_Color.png">
+            </div>
+            </div>
         </div>
-        <div class="links">
+        <div class="home-page w-full h-screen flex justify-center absolute top-0">
+        <div class="background-image w-full h-screen absolute overflow-hidden">
+            <img class="h-full sm:h-auto object-cover" src="main.jpg" alt="">
+        </div>
+        <div class="overlay w-full h-screen absolute opacity-65 bg-black"></div>
+        <div class="main-page max-w-[1140px] h-screen flex flex-col items-center justify-center relative gap-[64px]">
 
+        <div class="main-text text-2xl tracking-[32px] font-semibold lg:text-4xl z-2 cursor-pointer text-center !pl-32px">SAMJHANA</div>
+        <div class="links">
+            <div class="overflow-hidden relative"><a  class="absolute" id="link1">ABOUT</a></div>
+            <div class="overflow-hidden relative"><a class="absolute" id="link1">GALLERY</a></div>
+            <div class="overflow-hidden relative"><a class="absolute" id="link1">CONTACT</a></div>
         </div>
+        </div>
+        </div>
+        <!-- <div class="sub-page w-full h-screen flex justify-center absolute">
+            <div class="background-image absolute">
+                <img src="main.jpg" alt="">
+            </div>
+            <div class="overlay w-full h-screen absolute opacity-65 bg-black"></div>
+            <nav>
+                
+                <div class="nav-logo text-base lg:text-2xl tracking-[16px] font-semibold z-2 cursor-pointer text-center">SAMJHANA</div>
+                <div class="nav-links">
+                    <a>GALLERY</a><a>ABOUT</a>
+                    <a>CONTACT</a>
+                </div>
+            </nav>
+        </div> -->
     </div>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
