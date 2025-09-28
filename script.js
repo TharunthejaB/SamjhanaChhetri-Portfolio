@@ -49,13 +49,31 @@ Promise.all([minTime, imgLoad]).then(() => {
 
 
 function gsapAnimations(){
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    if(page === "index.html" || page === ""){
     t1.to("#loader", {
     y: -1000, // start 200px to the left
-})
-.from(".main-text",{
-    opacity: 0
-})
-.from("#link1",{
-    top: 60
-})
+    ease: "power3.out"
+    })
+    .from(".main-text",{
+    opacity: 0,
+    ease: "power3.out"
+    })
+    .from("#link1",{
+    top: 60,
+    ease: "power3.out"
+    })
+  }
+  if(page === "gallery.html"){
+    t1.to("#loader", {
+    y: -1000, // start 200px to the left
+    })
+    .from("#nav-logo , #link1 ,#link2",{
+    top: -90,
+    ease: "power3.out"
+    })
+  }
 }
+
+
